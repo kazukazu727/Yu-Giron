@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="col-lg-3">
+    <h3>登録情報編集</h3>
+  </div>
+</div>
+
+<div class="container">
+  <%= form_with model: @user, url: user_path, method: :patch, local:true do |f| %>
+  <table class="edit_customer">
+    <div class="row">
+      <tr>
+        <th class="col-lg-6 col-lg-offset-3">ユーザーネーム</th>
+        <div class="col-lg-3">
+          <td><%= f.text_field :name %></td>
+        </div>
+      </tr>
+    </div>
+    <div class="row">
+      <tr>
+        <th class="col-lg-6 col-lg-offset-3">メールアドレス</th>
+        <div class="col-lg-3">
+          <td><%= f.email_field :email %></td>
+        </div>
+      </tr>
+    </div>
+  </table>
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col">
+      <%= f.submit "登録内容を保存", class: "btn btn-info" %>
+    </div>
+    <% end %>

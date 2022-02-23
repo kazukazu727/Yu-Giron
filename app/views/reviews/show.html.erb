@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <h3>レビュー詳細</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-5 col-offset-3">
+      <dl>
+        <dt>タイトル</dt><dd><%= @review.tittle %></dd><br>
+        <dt>ジャンル</dt><dd><%= @review.genre %></dd><br>
+        <dt>プレイ時間</dt><dd><%= @review.play_time %></dd><br>
+        <dt>レビュー</dt><dd><%= @review.introduction %></dd><br>
+      </dl>
+    </div>
+  </div>
+
+  <div class="d-grid gap-2 col-5 mx-auto">
+    <%= link_to "編集する", edit_review_path(@review), class: "btn btn-success btn-lg" %>
+  </div>
+
+</div>

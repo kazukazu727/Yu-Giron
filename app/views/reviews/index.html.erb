@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <h3>レビュー一覧</h3>
+    </div>
+
+    <div class="col-lg-offset-1 col-lg-10">
+      <table class="table">
+        <tr class="active" style="font-weight: bold">
+          <td>ID</td>
+          <td>タイトル</td>
+          <td>ジャンル</td>
+          <td>プレイ時間</td>
+        </tr>
+        <% @reviews.each do |review| %>
+        <tr>
+          <td><%= review.id %></td>
+          <td><%= link_to review.tittle, review_path(review) %></td>
+          <td><%= review.genre %></td>
+          <td><%= review.play_time %></td>
+        </tr>
+        <%end%>
+      </table>
+    </div>
+
+  </div>
+</div>

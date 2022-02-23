@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root "homes#top"
   get "about" =>"homes#about"
-  get "user/mypage"=>"user#show"
+  get "user/mypage"=>"users#show"
   get "users/favorites"=>"user#favorites"
   get "followings"=>"relationships#followings"
   get "followers"=>"relationships#followers"

@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <h3>マイページ</h3>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2">
+      <h4>登録情報</h4>
+    </div>
+    <div class="col-lg-2">
+      <%= link_to"編集する", "/users/:id/edit", class: "btn btn-success" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <table class="table-bordered">
+        <tr>
+          <th class="col-lg-2 active">ユーザーネーム</th>
+          <td class="col-lg-8",><%= @user.name %></td>
+        </tr>
+        <tr>
+          <th class="col-lg-2 active">メールアドレス</th>
+          <td class="col-lg-8"><%= @user.email %></td>
+        </tr>
+      </table>
+    </div>
+
+      <div class="col-lg-2">
+        <h4>お気に入り</h4>
+      </div>
+      <div class="col-lg-2">
+        <%= link_to "一覧を見る", root_path, class: "btn btn-info" %>
+      </div>
+
+      <div class="col-lg-2">
+        <h4>いいね</h4>
+      </div>
+      <div class="col-lg-2">
+          <div class="link_index">
+            <%= link_to "一覧を見る", root_path, class: "btn btn-info" %>
+          </div>
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col-lg-3">
+      <h3>マイレビュー</h3>
+    </div>
+
+    <div class="col-lg-8">
+				<%= link_to new_review_path do %>
+					<span class="item-plus"><i class="fas fa-plus-circle"></i></span>
+				<% end %>
+		</div>
+
+    <div class="col-lg-offset-1 col-lg-10">
+      <table class="table">
+        <tr class="active" style="font-weight: bold">
+          <td>ID</td>
+          <td>タイトル</td>
+          <td>ジャンル</td>
+          <td>プレイ時間</td>
+        </tr>
+        <% @reviews.each do |review| %>
+        <tr>
+          <td><%= review.id %></td>
+          <td><%= link_to review.tittle, review_path(review) %></td>
+          <td><%= review.genre %></td>
+          <td><%= review.play_time %></td>
+        </tr>
+        <%end%>
+      </table>
+    </div>
+  </div>
+
+
+</div>

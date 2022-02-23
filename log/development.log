@@ -75,3 +75,1790 @@ Migrating to CreateRelationships (20220222125201)
   ↳ bin/rails:9
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:04:28 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.7ms)
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:04:30 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:04:32 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:04:39 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17196ms (Views: 17164.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 13315ms (Views: 13280.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 6223ms (Views: 6215.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 15755ms (Views: 15754.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:05:13 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 115ms (Views: 111.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:10:09 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (257.0ms)
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `customer_signed_in?' for #<#<Class:0x0000000004e83e98>:0x00007fb73cb22d20>
+Did you mean?  user_signed_in?):
+    2:   <div class="col-lg-2 sidebar h-auto">
+    3: <%# 未ログイン時には表示させる %>
+    4: <%# 統一 %>
+    5:     <% if customer_signed_in? %>
+    6:     <div class="box">
+    7:         <h4>カート内商品</h4>
+    8:         <% @cart_items.each do |cart_item| %>
+  
+app/views/homes/top.html.erb:5:in `_app_views_homes_top_html_erb__2757748648465096988_70212487027360'
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:13:02 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (12.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Item):
+     5:             <%# genres = Genre.where(is_valid: true) %>
+     6:             <%# genres.each do |genre| %>
+     7:                 <%#= link_to customer_items_path(genre_id: genre.id),class: "list-group-item" do %>
+     8:                 <%#= genre.name %><span class="badge"><%= Item.where(genre_id: genre.id).count %></span>
+     9:                 <%# end %>
+    10:             <%# end %>
+    11:     </div>
+  
+app/views/homes/top.html.erb:8:in `_app_views_homes_top_html_erb__2757748648465096988_70212461882760'
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:13:12 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Item):
+     5:             <%# genres = Genre.where(is_valid: true) %>
+     6:             <%# genres.each do |genre| %>
+     7:                 <%#= link_to customer_items_path(genre_id: genre.id),class: "list-group-item" do %>
+     8:                 <%#= genre.name %><span class="badge"><%= Item.where(genre_id: genre.id).count %></span>
+     9:                 <%# end %>
+    10:             <%# end %>
+    11:     </div>
+  
+app/views/homes/top.html.erb:8:in `_app_views_homes_top_html_erb__2757748648465096988_70212453013520'
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:13:33 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial customer/_index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ec2-user/environment/Yu-Giron/app/views"
+  * "/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/kaminari-core-1.2.2/app/views"
+  * "/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.1/app/views"
+):
+    13: </div>
+    14: 		<div class="col-lg-10">
+    15: 			<h1 style="font-weight: bold;">NEW ITEMS <i class="fas fa-shopping-cart"></i></h1>
+    16: 			<%= render 'customer/index', index_items:@recomend_items %>
+    17: 		</div>
+    18: 			<%= link_to "もっと見る", customer_items_path, class: "btn btn-default btn-lg",style: "margin-bottom:30px;" %>
+    19: 		</div>
+  
+app/views/homes/top.html.erb:16:in `_app_views_homes_top_html_erb__2757748648465096988_70212466880880'
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:16:25 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 80ms (Views: 79.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:17:01 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 81ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:17:11 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 85ms (Views: 84.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:18:34 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 105ms (Views: 103.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:19:25 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 77ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:21:03 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 79ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:23:06 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 94ms (Views: 92.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 175.108.254.68 at 2022-02-23 19:23:09 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 175.108.254.68 at 2022-02-23 19:23:38 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#about as HTML
+  Rendering homes/about.html.erb within layouts/application
+  Rendered homes/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 82ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:29:33 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 95ms (Views: 94.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 175.108.254.68 at 2022-02-23 19:29:36 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (112.1ms)
+Completed 200 OK in 229ms (Views: 211.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_up" for 175.108.254.68 at 2022-02-23 19:30:52 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 86ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 175.108.254.68 at 2022-02-23 19:32:34 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 122ms (Views: 120.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 175.108.254.68 at 2022-02-23 19:32:53 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (727.8ms)
+Completed 500 Internal Server Error in 739ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_customer_session_path' for #<#<Class:0x00007fb73902ad58>:0x00007fb73a65dda0>
+Did you mean?  new_user_session_path):
+    65:   <div class="row">
+    66:     <div class="col-lg-4">
+    67:       <h3>既に登録済みの方</h3>
+    68:       <span><%= link_to "こちら", new_customer_session_path %>からログインしてください。</span>
+    69:     </div>
+    70:   </div>
+    71: </div>
+  
+app/views/devise/registrations/new.html.erb:68:in `_app_views_devise_registrations_new_html_erb__843288951846390500_70212467745080'
+Started GET "/users/sign_up" for 175.108.254.68 at 2022-02-23 19:33:05 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 185ms (Views: 184.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:33:29 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 131ms (Views: 130.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:39:10 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 92ms (Views: 91.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:42:01 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Yu-Giron/app/views/devise/sessions/new.html.erb:74: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/devise/sessions/new.html.erb:74: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:46:45 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Yu-Giron/app/views/devise/sessions/new.html.erb:74: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/devise/sessions/new.html.erb:74: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:47:24 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Yu-Giron/app/views/devise/sessions/new.html.erb:75: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/devise/sessions/new.html.erb:75: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:47:26 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Yu-Giron/app/views/devise/sessions/new.html.erb:75: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/devise/sessions/new.html.erb:75: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:48:03 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial users/shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ec2-user/environment/Yu-Giron/app/views"
+  * "/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/kaminari-core-1.2.2/app/views"
+  * "/home/ec2-user/.rvm/gems/ruby-2.6.3/gems/devise-4.8.1/app/views"
+):
+    12: 
+    13: <div class="container">
+    14:   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    15:   <%= render "users/shared/error_messages", resource: resource %>
+    16:   <div class="row">
+    17:     <div class="col-lg-5 col-lg-offset-3">
+    18:       <span>ユーザーネーム</span>
+  
+app/views/devise/sessions/new.html.erb:15:in `block in _app_views_devise_sessions_new_html_erb___2647477397650496916_70212467920080'
+app/views/devise/sessions/new.html.erb:14:in `_app_views_devise_sessions_new_html_erb___2647477397650496916_70212467920080'
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:48:15 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 107ms (Views: 106.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:48:28 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 82ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:48:33 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 77ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:49:05 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 98ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 175.108.254.68 at 2022-02-23 19:49:12 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 91ms (Views: 90.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 175.108.254.68 at 2022-02-23 19:49:31 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aqxvxiALbcydNzNdCFpUCFrzSDJzAtLDst+tnQtHswFwIw4WZT5sBpQw7EstFJLNmRaWRhK4nYxrlxd9R64jQQ==", "user"=>{"name"=>"kk", "email"=>"a@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+Unpermitted parameter: :name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "a@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "a@gmail.com"], ["encrypted_password", "$2a$12$KeA6s511Xy6NKmhuA/0KTeSD6PVkk.2twaol.6v.vmQYR1NvgGb2C"], ["created_at", "2022-02-23 19:49:31.443856"], ["updated_at", "2022-02-23 19:49:31.443856"]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://c30105dc9934426aa9b686d11c0b3d49.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 350ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:49:31 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 175.108.254.68 at 2022-02-23 19:49:42 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cW/dkTIbjGJVf+EprH0jChIkYKzFjW8PBulJKuaICjVg2QMsHugK86+jFezf9y8RZhEoBuVO4EwCmDf4ljzsXQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://c30105dc9934426aa9b686d11c0b3d49.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 25ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:49:42 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 102ms (Views: 101.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:49:44 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 98ms (Views: 96.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:50:47 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 108ms (Views: 107.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:50:52 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nQrlX9mnylG3ojM8o4O62+ublyLuBm08gWv3yuRFIwgKW0AwGY3BAEmEoJhZWpa4vf8/fEp4RVb95i58b2octw==", "user"=>{"name"=>"kk", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nQrlX9mnylG3ojM8o4O62+ublyLuBm08gWv3yuRFIwgKW0AwGY3BAEmEoJhZWpa4vf8/fEp4RVb95i58b2octw==", "user"=>{"name"=>"kk", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+Unpermitted parameter: :name
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 407ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:51:27 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N4kOpKSq2xo4qpuy92fSW7cgwzjgyqHJR2qty6yvTUGg2KvLZIDQS8aMCBYNvv444URrZkS0iaM753R9J4By/g==", "user"=>{"name"=>"a@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N4kOpKSq2xo4qpuy92fSW7cgwzjgyqHJR2qty6yvTUGg2KvLZIDQS8aMCBYNvv444URrZkS0iaM753R9J4By/g==", "user"=>{"name"=>"a@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+Unpermitted parameter: :name
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 384ms (Views: 78.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:53:34 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 77ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:53:39 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"poxWyukmLqFoIQUST5/7DKt5ZwpaC9UhlQ4kbI6ha4Mx3fOlKQwl8JYHlra1Rtdv/R3PVP51/Uvpg/3aBY5UPA==", "user"=>{"name"=>"kk", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"poxWyukmLqFoIQUST5/7DKt5ZwpaC9UhlQ4kbI6ha4Mx3fOlKQwl8JYHlra1Rtdv/R3PVP51/Uvpg/3aBY5UPA==", "user"=>{"name"=>"kk", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+Unpermitted parameter: :name
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 403ms (Views: 95.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:54:14 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (undefined local variable or method `application_controller' for main:Object):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/homes_controller.rb:1:in `<main>'
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:54:20 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (undefined local variable or method `application_controller' for main:Object):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/homes_controller.rb:1:in `<main>'
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:54:31 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined local variable or method `application_controller' for main:Object):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/homes_controller.rb:1:in `<main>'
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:54:42 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 546ms (Views: 540.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:54:53 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 92ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:54:57 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 140ms (Views: 129.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:55:03 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3U9l2rNlwUABR45bPaMzTcnIczQDuRONDnZ4lr8oke7FKNZ6KEJj/qnnYkKnuT0skm/fRvSH7grsHgHgddwkTQ==", "user"=>{"name"=>"kk", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "kk"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3U9l2rNlwUABR45bPaMzTcnIczQDuRONDnZ4lr8oke7FKNZ6KEJj/qnnYkKnuT0skm/fRvSH7grsHgHgddwkTQ==", "user"=>{"name"=>"kk", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 403ms (Views: 97.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 175.108.254.68 at 2022-02-23 19:56:22 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 82ms (Views: 81.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 175.108.254.68 at 2022-02-23 19:56:52 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HnrMTkbQZSUPjwoUh6Uv4Hr7Uyc1w3wGc0q1rPxTzlKEonjN7GTmML13v//1rDjnxe8Wvoan5rS8mIWIM0A6Cw==", "user"=>{"name"=>"かずかず", "email"=>"b@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "b@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "b@gmail.com"], ["encrypted_password", "$2a$12$EYdIUPYd0WXQav.DIk1o2eV2BJK08xFXbCDFLlPtTcc0IngJ8kM4e"], ["name", "かずかず"], ["created_at", "2022-02-23 19:56:52.514590"], ["updated_at", "2022-02-23 19:56:52.514590"]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://c30105dc9934426aa9b686d11c0b3d49.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 351ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:56:52 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 102ms (Views: 101.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 175.108.254.68 at 2022-02-23 19:56:57 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hW0x1F+CFs3Yup/4Ps5jD+XDgUPzwR9WAkcMXbU2ciMSPJS7n6gdnCacDFzEF09ss6cpHVe/Nzx+ytXrPhlNnA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://c30105dc9934426aa9b686d11c0b3d49.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:56:57 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 92ms (Views: 91.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:57:00 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 81ms (Views: 80.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 175.108.254.68 at 2022-02-23 19:57:09 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7sUCFImb38BkZ0/NVpW4SdHz7lA9BHTOqeCgTkwiLHZ3V8ycHAscd2VSFSLVHkD+VQo/dkmYAwgxbnETHsdPlg==", "user"=>{"name"=>"かずかず", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "かずかず"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://c30105dc9934426aa9b686d11c0b3d49.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 311ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:57:09 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 19:59:09 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant UserController):
+  
+activesupport (5.2.6.2) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6.2) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6.2) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6.2) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6.2) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6.2) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 175.108.254.68 at 2022-02-23 19:59:13 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 101ms (Views: 97.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 19:59:55 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 115ms (Views: 107.8ms | ActiveRecord: 4.2ms)
+
+
+Started DELETE "/users/sign_out" for 175.108.254.68 at 2022-02-23 20:00:13 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vOtWCitx3XMoEHdaKaJHDqur9phYwFbBBFM25nMiL3McKk7Gxmdd4Kg3P57Zae5IsBaxOnHodbpiGUpYgmE1Nw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://c30105dc9934426aa9b686d11c0b3d49.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 21ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 20:00:13 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 121ms (Views: 120.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 175.108.254.68 at 2022-02-23 20:00:15 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 126ms (Views: 124.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 175.108.254.68 at 2022-02-23 20:00:21 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8oLvlQ/XbtochW0WXLYX3yL/dEJ5ln0/yQjl2vynjc1QtJA89aKftC5WaqL0DIRalFCuZbPtt6Ew/SvbhqSLVw==", "user"=>{"name"=>"かずかず", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "かずかず"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Redirected to https://c30105dc9934426aa9b686d11c0b3d49.vfs.cloud9.ap-northeast-1.amazonaws.com/user/mypage.2
+Completed 302 Found in 315ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/user/mypage.2" for 175.108.254.68 at 2022-02-23 20:00:22 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 113ms (Views: 110.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/mypage.2" for 175.108.254.68 at 2022-02-23 20:31:02 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 126ms (Views: 121.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/user/mypage.2" for 175.108.254.68 at 2022-02-23 20:43:52 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 126ms (Views: 108.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 20:45:31 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 82ms (Views: 80.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/mypage.2" for 175.108.254.68 at 2022-02-23 20:45:35 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 79ms (Views: 72.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/mypage.2" for 175.108.254.68 at 2022-02-23 20:46:28 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 103ms (Views: 96.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/mypage.2" for 175.108.254.68 at 2022-02-23 20:46:29 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 96ms (Views: 88.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user/mypage.2" for 175.108.254.68 at 2022-02-23 20:52:49 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    58:           <td>ジャンル</td>
+    59:           <td>プレイ時間</td>
+    60:         </tr>
+    61:         <% @reviews.each do |review| %>
+    62:         <tr>
+    63:           <td><%= review.id %></td>
+    64:           <td><%= link_to review.tittle, admin_review_path(review) %></td>
+  
+app/views/users/show.html.erb:61:in `_app_views_users_show_html_erb__877946782509478981_70222595785540'
+Started GET "/user/mypage.2" for 175.108.254.68 at 2022-02-23 20:55:37 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:61
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 141ms (Views: 85.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/user/mypage.2" for 175.108.254.68 at 2022-02-23 20:57:28 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:59
+  Rendered users/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 107ms (Views: 98.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/mypage.2" for 175.108.254.68 at 2022-02-23 20:58:12 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:65
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 110ms (Views: 104.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/mypage.2" for 175.108.254.68 at 2022-02-23 20:58:52 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 89ms (Views: 83.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reviews/new" for 175.108.254.68 at 2022-02-23 21:00:51 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+Completed 406 Not Acceptable in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ReviewsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user/mypage.2" for 175.108.254.68 at 2022-02-23 21:00:58 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as 
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 113ms (Views: 104.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reviews/new" for 175.108.254.68 at 2022-02-23 21:02:01 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+Completed 406 Not Acceptable in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ReviewsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 175.108.254.68 at 2022-02-23 21:02:32 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 81ms (Views: 80.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:02:35 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 106ms (Views: 101.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reviews/new" for 175.108.254.68 at 2022-02-23 21:02:39 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+Completed 406 Not Acceptable in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ReviewsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.6.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.6.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.6.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.6.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.6.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.6.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.6.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.6.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.6.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.6.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.6.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.6.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.6.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.6.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.6.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.6.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.6.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.6.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.6.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.6.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.6.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.6.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.6.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.6.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:03:18 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 85ms (Views: 80.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:03:20 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 101ms (Views: 97.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:03:39 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 88ms (Views: 83.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reviews/new" for 175.108.254.68 at 2022-02-23 21:03:40 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 83ms (Views: 81.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/reviews/new" for 175.108.254.68 at 2022-02-23 21:05:13 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 100ms (Views: 98.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/reviews/new" for 175.108.254.68 at 2022-02-23 21:13:05 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (17.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 114ms (Views: 112.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reviews/new" for 175.108.254.68 at 2022-02-23 21:13:15 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 82ms (Views: 80.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/reviews" for 175.108.254.68 at 2022-02-23 21:13:28 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wAdG1zeSic59gKfx3TqHUfSMhoAXDH+yQwXYrOZSKWgQEZ7TjKSUcKFQpAVCkK/8I2RISpmyONFyC2WY01hMow==", "tittle"=>"test", "genre"=>"アクション", "play_time"=>"30", "commit"=>"新規投稿"}
+No template found for ReviewsController#create, rendering head :no_content
+Completed 204 No Content in 25ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:13:46 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 106ms (Views: 101.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/reviews/new" for 175.108.254.68 at 2022-02-23 21:13:48 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 85ms (Views: 76.0ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/reviews" for 175.108.254.68 at 2022-02-23 21:15:48 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hjKTlW6NDM4FqZIlaEwca6lxNVzZoQIStlDNiY7My6T1dTQOohPubYgf3axBwdZO3wnhesd2YVRTYNIuMW4M5g==", "tittle"=>"test", "genre"=>"アクション", "play_time"=>"30", "commit"=>"新規投稿"}
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `review_params' for #<ReviewsController:0x00007fbbf42f0c30>
+Did you mean?  review_path):
+  
+app/controllers/reviews_controller.rb:10:in `create'
+Started GET "/reviews/new" for 175.108.254.68 at 2022-02-23 21:18:41 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 200ms (Views: 188.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/reviews/new" for 175.108.254.68 at 2022-02-23 21:18:49 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 223ms (Views: 221.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/reviews" for 175.108.254.68 at 2022-02-23 21:19:03 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wVuaLdJoCll7yJRvoPEdiNBLHGssaAXYAGbUU+MEY9sRTUIpaV4X56cYl5s/WzUlB6PSoaLWQrsxaGln1g4GEA==", "review"=>{"tittle"=>"test", "genre"=>"RPG", "play_time"=>"2", "introduction"=>"面白かったです"}, "commit"=>"新規投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11
+Redirected to https://c30105dc9934426aa9b686d11c0b3d49.vfs.cloud9.ap-northeast-1.amazonaws.com/user/mypage
+Completed 302 Found in 16ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:19:03 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 85ms (Views: 79.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:19:39 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `review' for #<User:0x00007fbbec33a860>
+Did you mean?  reviews
+               reviews=):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:19:58 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 113ms (Views: 79.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:22:15 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 99ms (Views: 79.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:23:06 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 122ms (Views: 86.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:23:08 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 85ms (Views: 72.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reviews/new" for 175.108.254.68 at 2022-02-23 21:23:25 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 107ms (Views: 99.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/reviews" for 175.108.254.68 at 2022-02-23 21:24:26 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered reviews/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 92ms (Views: 88.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:24:26 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 124ms (Views: 113.7ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/reviews/new" for 175.108.254.68 at 2022-02-23 21:25:50 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 124ms (Views: 114.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/reviews" for 175.108.254.68 at 2022-02-23 21:26:00 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VwTajNq/LD9aZRK4YT8zw+x+fOgBh4FIAaLzRnzHPMIkQ30XFiHOnNfTXTFIsvnmmgaozh9Q4g7kkuzhw2X7gA==", "review"=>{"tittle"=>"test", "genre"=>"アクション", "play_time"=>"2", "introduction"=>"test"}, "commit"=>"新規投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"reviews", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/reviews_controller.rb:12:in `create'
+Started POST "/reviews" for 175.108.254.68 at 2022-02-23 21:28:48 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6.2/lib/active_record/log_subscriber.rb:98
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VwTajNq/LD9aZRK4YT8zw+x+fOgBh4FIAaLzRnzHPMIkQ30XFiHOnNfTXTFIsvnmmgaozh9Q4g7kkuzhw2X7gA==", "review"=>{"tittle"=>"test", "genre"=>"アクション", "play_time"=>"2", "introduction"=>"test"}, "commit"=>"新規投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"reviews", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/reviews_controller.rb:12:in `create'
+Started POST "/reviews" for 175.108.254.68 at 2022-02-23 21:29:36 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VwTajNq/LD9aZRK4YT8zw+x+fOgBh4FIAaLzRnzHPMIkQ30XFiHOnNfTXTFIsvnmmgaozh9Q4g7kkuzhw2X7gA==", "review"=>{"tittle"=>"test", "genre"=>"アクション", "play_time"=>"2", "introduction"=>"test"}, "commit"=>"新規投稿"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (undefined local variable or method `review' for #<ReviewsController:0x00000000044d67d8>
+Did you mean?  @review):
+  
+app/controllers/reviews_controller.rb:12:in `create'
+Started POST "/reviews" for 175.108.254.68 at 2022-02-23 21:29:48 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VwTajNq/LD9aZRK4YT8zw+x+fOgBh4FIAaLzRnzHPMIkQ30XFiHOnNfTXTFIsvnmmgaozh9Q4g7kkuzhw2X7gA==", "review"=>{"tittle"=>"test", "genre"=>"アクション", "play_time"=>"2", "introduction"=>"test"}, "commit"=>"新規投稿"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11
+Redirected to https://c30105dc9934426aa9b686d11c0b3d49.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 21ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 175.108.254.68 at 2022-02-23 21:29:48 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 611ms (Views: 608.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:29:53 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 104ms (Views: 92.6ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:36:09 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 115ms (Views: 98.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/reviews/new" for 175.108.254.68 at 2022-02-23 21:36:11 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#new as HTML
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 109ms (Views: 92.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/reviews" for 175.108.254.68 at 2022-02-23 21:36:19 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TLVNT5pjvaUEcXy1IvEPJQSr33hihkHsG7OOBV4c8AM/8urUVv1fBonHMzwLfMUActMLXnxRIqr+g5Gi4b43QQ==", "review"=>{"tittle"=>"test", "genre"=>"アクション", "play_time"=>"2", "introduction"=>"test"}, "commit"=>"新規投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:11
+Redirected to https://c30105dc9934426aa9b686d11c0b3d49.vfs.cloud9.ap-northeast-1.amazonaws.com/user/mypage
+Completed 302 Found in 7ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:36:20 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 109ms (Views: 104.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/reviews" for 175.108.254.68 at 2022-02-23 21:41:19 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  Rendered reviews/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:           <td>ジャンル</td>
+    13:           <td>プレイ時間</td>
+    14:         </tr>
+    15:         <% @reviews.each do |review| %>
+    16:         <tr>
+    17:           <td><%= review.id %></td>
+    18:           <td><%= link_to review.tittle, review_path(review) %></td>
+  
+app/views/reviews/index.html.erb:15:in `_app_views_reviews_index_html_erb___1025977649332109272_40743780'
+Started GET "/reviews" for 175.108.254.68 at 2022-02-23 21:41:59 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:15
+  Rendered reviews/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 112ms (Views: 107.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/reviews" for 175.108.254.68 at 2022-02-23 21:47:28 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:15
+  Rendered reviews/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 109ms (Views: 106.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/reviews" for 175.108.254.68 at 2022-02-23 21:47:30 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:15
+  Rendered reviews/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:25
+Completed 200 OK in 92ms (Views: 90.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 21:59:04 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 138ms (Views: 116.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/:id/edit" for 175.108.254.68 at 2022-02-23 21:59:05 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 89ms (Views: 85.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/users/:id" for 175.108.254.68 at 2022-02-23 21:59:13 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hb1IotUmXu5Ek9OSSGdwB/5DJSiv2vkdmN/FLCRzD0msLlBVke8FRyVCHmCt7HspVCSQM1znK9nKnry/I4p2EA==", "user"=>{"name"=>"かずかず", "email"=>"c@gmail.com"}, "commit"=>"登録内容を保存", "id"=>":id"}
+No template found for UsersController#update, rendering head :no_content
+Completed 204 No Content in 25ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/:id/edit" for 175.108.254.68 at 2022-02-23 21:59:17 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 96ms (Views: 92.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/:id/edit" for 175.108.254.68 at 2022-02-23 22:01:50 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 100ms (Views: 86.7ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/users/:id" for 175.108.254.68 at 2022-02-23 22:01:56 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QmAdNsnBgStqJ18E7x6USBahbqBhcVuW6wZgLQYaYmSSdsUycveclbb3XPBwtLzlwUmgau/PHPXaCN0ZMxAHrw==", "user"=>{"name"=>"かずかずmax", "email"=>"b@gmail.com"}, "commit"=>"登録内容を保存", "id"=>":id"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Update (2.6ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "かずかずmax"], ["updated_at", "2022-02-23 22:01:56.587075"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13
+Redirected to https://c30105dc9934426aa9b686d11c0b3d49.vfs.cloud9.ap-northeast-1.amazonaws.com/user/mypage
+Completed 302 Found in 16ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 22:01:56 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 99ms (Views: 89.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/:id/edit" for 175.108.254.68 at 2022-02-23 22:01:58 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 105ms (Views: 101.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/users/:id" for 175.108.254.68 at 2022-02-23 22:02:05 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TCopYjkCS14bxDN1RT1jYFXvchHVPVEKAb3Js/JtTFb9uTGVfcsQ93oV/oegtmhO/4jHCiYAg85T/LAg9ZQ1Dw==", "user"=>{"name"=>"かずかず", "email"=>"b@gmail.com"}, "commit"=>"登録内容を保存", "id"=>":id"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:13
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "かずかず"], ["updated_at", "2022-02-23 22:02:05.313336"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:13
+Redirected to https://c30105dc9934426aa9b686d11c0b3d49.vfs.cloud9.ap-northeast-1.amazonaws.com/user/mypage
+Completed 302 Found in 15ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/user/mypage" for 175.108.254.68 at 2022-02-23 22:02:05 +0000
+Cannot render console from 175.108.254.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."user_id" = ? ORDER BY "reviews"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 2], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/show.html.erb:69
+  Rendered users/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 100ms (Views: 95.7ms | ActiveRecord: 0.2ms)
+
+
