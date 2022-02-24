@@ -8,16 +8,40 @@
       <table class="table">
         <tr class="active" style="font-weight: bold">
           <td>ID</td>
+          <td>ゲーム名</td>
+          <td>評価</td>
           <td>タイトル</td>
-          <td>ジャンル</td>
-          <td>プレイ時間</td>
+          <td>レビュワー</td>
+          <td>お気に入り</td>
         </tr>
         <% @reviews.each do |review| %>
         <tr>
           <td><%= review.id %></td>
-          <td><%= link_to review.tittle, review_path(review) %></td>
+          <td><%= review.game_tittle %></td>
+          <td>
+            <div class="relative-review-star">
+              <span id="star-rate-<%= review.id %>"></span>
+              <script>
+                $('#star-rate-<%= review.id %>').raty({
+                  size: 36,
+                  starOff: "<%= asset_path('star-off.png') %>",
+                  starOn: "<%= asset_path('star-on.png') %>",
+                  starHalf: "<%= asset_path('star-half.png') %>",
+                  half: true,   # 星半分表示
+                  readOnly: true,   # 読み取り専用
+                  score: <%= review.star %>,   # 星評価の表示
+                });
+              </script>
+              <%= review.star %>
+            </div>
+          </td>
           <td><%= review.genre %></td>
-          <td><%= review.play_time %></td>
+          <td><%= link_to review.tittle, review_path(review) %></td>
+          <td>
+            <% user=User.find(review.user_id) %>
+            <%= user.name %>
+          </td>
+          <td></td>
         </tr>
         <%end%>
       </table>

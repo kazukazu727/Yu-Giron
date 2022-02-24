@@ -9,6 +9,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review=Review.new(review_params)
+    @review.user_id=current_user.id
     @review.save
     redirect_to user_mypage_path
   end
@@ -31,10 +32,13 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+    @review=Review.find(params[:id])
+    @review.destroy
+    redirect_to user_mypage_path
   end
 
   def review_params
-    params.require(:review).permit(:tittle, :genre, :introduction, :play_time, :user_id)
+    params.require(:review).permit(:tittle, :genre, :introduction, :play_time, :user_id, :star, :price, :game_tittle, :plat_form)
   end
 
 end
