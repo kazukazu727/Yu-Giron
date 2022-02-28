@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <h3>お気に入り一覧</h3>
+    </div>
+
+    <div class="col-lg-offset-1 col-lg-10">
+      <table class="table">
+        <tr class="active" style="font-weight: bold">
+          <td>ID</td>
+          <td>ゲーム名</td>
+          <td>評価</td>
+          <td>タイトル</td>
+          <td>レビュワー</td>
+          <td>お気に入り</td>
+        </tr>
+        <% @favorite_reviews.each do |review|%>
+        <tr>
+          <td><%= review.id %></td>
+          <td><%= review.game_tittle %></td>
+          <td>
+            <div class="relative-review-star">
+              <span id="star-rate-<%= review.id %>"></span>
+              <script>
+                $('#star-rate-<%= review.id %>').raty({
+                  size: 36,
+                  starOff: "<%= asset_path('star-off.png') %>",
+                  starOn: "<%= asset_path('star-on.png') %>",
+                  starHalf: "<%= asset_path('star-half.png') %>",
+                  half: true,  // # 星半分表示
+                  readOnly: true, //  # 読み取り専用
+                  score: <%= review.star %>,  // # 星評価の表示
+                });
+              </script>
+              <%= review.star %>
+            </div>
+          </td>
+          <td><%= review.genre %></td>
+          <td><%= link_to review.tittle, review_path(review) %></td>
+          <td>
+            <% user=User.find(review.user_id) %>
+            <%= link_to user.name, user_path(user) %>
+          </td>
+          <td>
+            <div id="review_<%= review.id %>"><%= render "favorites/favorite", review: review %></div>
+          </td>
+        </tr>
+        <%end%>
+      </table>
+    </div>
+
+  </div>
+</div>

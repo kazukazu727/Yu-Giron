@@ -25,7 +25,7 @@
     <div class="form-group col-md-9 col-md-offset-2">
       <div class="form-inline">
         <label class="col-sm-3">ジャンル</label>
-        <%= f.select :genre, [["アクション", "アクション"], ["RPG", "RPG"], ["シミュレーション", "シミュレーション"], ["サウンドノベル", "サウンドノベル"]], include_blank: "選択して下さい" %>
+        <%= f.select :genre, Review.genres_i18n.keys.map{|k| [I18n.t("enum.review.genre.#{k}"), k]}, include_blank: "選択して下さい" %>
       </div>
     </div>
 
@@ -60,8 +60,8 @@
           starOff:  '<%= asset_path('star-off.png') %>',
           starOn : '<%= asset_path('star-on.png') %>',
           starHalf: '<%= asset_path('star-half.png') %>',
-          scoreName: 'review[star]',   # starカラムへの保存
-          half: true,   # 星半分の入力
+          scoreName: 'review[star]',/*   # starカラムへの保存 */
+          half: true,//   # 星半分の入力
         });
       </script>
       </div>

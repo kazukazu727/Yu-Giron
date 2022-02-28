@@ -1,0 +1,8 @@
+ja:
+  enum:
+    review:
+      genre:
+        action: "アクション"
+        rpg: "RPG"
+        sml: "シミュレーション"
+        sn: "サウンドノベル"

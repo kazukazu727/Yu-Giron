@@ -4,14 +4,20 @@ Rails.application.routes.draw do
   devise_for :users
   root "homes#top"
   get "about" =>"homes#about"
-  get "user/mypage"=>"users#show"
-  get "users/favorites"=>"user#favorites"
-  get "followings"=>"relationships#followings", as: "followings"
-  get "followers"=>"relationships#followers", as: "followers"
+  get "user/mypage"=>"users#mypage"
+  get "/search"=>"search#search"
 
-  resources :users, only:[:show, :edit, :update]
-  resources :reviews, only:[:new, :create, :index, :show, :edit, :update, :destroy]
-  resources :relationships, only:[:create, :destroy]
-  resources :favorites, only:[:create, :destroy]
+  resources :users, only:[:show, :edit, :update]do
+    member do
+      get :favorites
+    end
+    resource :relationships, only:[:create, :destroy]
+    get "followings"=>"relationships#followings", as: "followings"
+    get "followers"=>"relationships#followers", as: "followers"
+  end
+
+  resources :reviews, only:[:new, :create, :index, :show, :edit, :update, :destroy]do
+    resource :favorites, only: [:create, :destroy]
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,17 +1,16 @@
 class UsersController < ApplicationController
-  #before_action :set_user, only: [:show]
-  #before_action :authenticate_user!, only: [:mypage]
+  before_action :authenticate_user!, only: [:mypage]
 
   def show
-    @user=current_user
+    @user=User.find(params[:id])
     @reviews=@user.reviews.page(params[:page]).reverse_order
   end
 
-  #def mypage
-   # @user=current_user
-    #@reviews=@user.reviews.page(params[:page]).reverse_order
-  #  redirect_to user_path(current_user)
-  #end
+  def mypage
+    @user=current_user
+    @reviews=@user.reviews.page(params[:page]).reverse_order
+    redirect_to user_path(current_user)
+  end
 
   def edit
     @user=current_user
@@ -33,6 +32,9 @@ class UsersController < ApplicationController
   end
 
   def favorites
+    @user=User.find(params[:id])
+    favorites=Favorite.where(user_id: @user.id).pluck(:review_id)
+    @favorite_reviews=Review.find(favorites)
   end
 
   private
@@ -40,8 +42,5 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :introduction)
   end
 
-  #def set_user
-   # @user=User.find([:id])
-  #end
 
 end

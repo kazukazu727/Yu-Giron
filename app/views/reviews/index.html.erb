@@ -27,9 +27,9 @@
                   starOff: "<%= asset_path('star-off.png') %>",
                   starOn: "<%= asset_path('star-on.png') %>",
                   starHalf: "<%= asset_path('star-half.png') %>",
-                  half: true,   # 星半分表示
-                  readOnly: true,   # 読み取り専用
-                  score: <%= review.star %>,   # 星評価の表示
+                  half: true,  // # 星半分表示
+                  readOnly: true, //  # 読み取り専用
+                  score: <%= review.star %>,  // # 星評価の表示
                 });
               </script>
               <%= review.star %>
@@ -39,20 +39,10 @@
           <td><%= link_to review.tittle, review_path(review) %></td>
           <td>
             <% user=User.find(review.user_id) %>
-            <%= user.name %>
+            <%= link_to user.name, user_path(user) %>
           </td>
           <td>
-            <% @reviews.each do |review| %>
-              <% if review.favo?(current_user) %>
-                <%= link_to favorites_path(review), method: :delete do %>
-                ♥ <%= review.favorites.count %>
-                <% end %>
-              <% else %>
-                <%=link_to favorites_path(review), method: :post do %>
-                ♡ <%= review.favorites.count %>
-                <% end %>
-              <% end %>
-            <% end %>
+            <div id="review_<%= review.id %>"><%= render "favorites/favorite", review: review %></div>
           </td>
         </tr>
         <%end%>
