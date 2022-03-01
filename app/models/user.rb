@@ -12,6 +12,11 @@ class User < ApplicationRecord
   has_many :followings, through: :relationships, source: :followed
   has_many :followers, through: :reverse_of_relationships, source: :follower
 
+  validates :name, presence: true, uniqueness: true,
+                   length: {minimum: 2, maximum:20}
+
+  validates :introduction, length: {maximum:150}
+
   def follow(user_id)
     relationships.create(followed_id: user_id)
   end
@@ -23,5 +28,7 @@ class User < ApplicationRecord
   def following?(user)
     followings.include?(user)
   end
+
+
 
 end

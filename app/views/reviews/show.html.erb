@@ -7,12 +7,18 @@
   <div class="row">
     <div class="col-lg-5 col-offset-3">
       <dl>
-        <dt>ゲーム名</dt><dd><%= @review.game_tittle %></dd><br>
-        <dt>タイトル</dt><dd><%= @review.tittle %></dd><br>
-        <dt>ジャンル</dt><dd><%= @review.genre %></dd><br>
-        <dt>プレイ時間</dt><dd><%= @review.play_time %></dd><br>
-        <dt>価格</dt><dd><%= @review.price %></dd><br>
-        <dt>プラットフォーム</dt><dd><%= @review.plat_form %></dd><br>
+        <dt>ゲーム名</dt>
+          <dd><%= @review.game_tittle %></dd><br>
+        <dt>タイトル</dt>
+          <dd><%= @review.tittle %></dd><br>
+        <dt>ジャンル</dt>
+        <dd><%= @review.genre.name %></dd><br>
+        <dt>プレイ時間</dt>
+        <dd><%= @review.play_time.name %></dd><br>
+        <dt>価格</dt>
+        <dd><%= @review.price.name %></dd><br>
+        <dt>プラットフォーム</dt>
+        <dd><%= @review.plat_form.name %></dd><br>
         <dt>評価</dt>
         <dd>
           <div class="relative-review-star">
@@ -36,12 +42,13 @@
     </div>
   </div>
 
+  <% if user_signed_in? && @review.user_id ==current_user.id %>
   <div class="d-grid gap-2 col-5 mx-auto">
     <%= link_to "編集する", edit_review_path(@review), class: "btn btn-success btn-lg" %>
   </div>
-
   <div class="d-grid gap-2 col-5 mx-auto">
     <%= link_to "削除する", review_path(@review), method: :delete ,class: "btn btn-danger btn-lg" %>
   </div>
+  <% end %>
 
 </div>

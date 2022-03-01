@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_28_120918) do
+ActiveRecord::Schema.define(version: 2022_03_01_135707) do
 
   create_table "favorites", force: :cascade do |t|
     t.integer "user_id"
@@ -29,15 +29,15 @@ ActiveRecord::Schema.define(version: 2022_02_28_120918) do
   create_table "reviews", force: :cascade do |t|
     t.integer "user_id"
     t.string "tittle"
-    t.integer "genre"
+    t.integer "genre_id", null: false
     t.text "introduction"
-    t.string "play_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "price"
     t.string "game_tittle"
-    t.string "plat_form"
     t.float "star", default: 0.0, null: false
+    t.integer "play_time_id"
+    t.integer "price_id"
+    t.integer "plat_form_id"
   end
 
   create_table "users", force: :cascade do |t|

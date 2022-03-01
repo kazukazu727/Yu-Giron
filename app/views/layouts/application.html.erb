@@ -57,10 +57,33 @@
       <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand">検索欄</a>
-            <form class="d-flex">
+            <%= search_form_for @search, url: reviews_path do |f| %>
+              <div class = 'nav-up'>
+                <dt><%= f.text_field :tittle_cont ,placeholder: '検索するテキストを入力...' %></dt>
+                <dd><%= f.submit ("検索") , class: 'search-btn'%></dd>
+              </div>
+              <div class='nav-down'>
+                <div class='label-select'>
+                  <%= f.label :genre_id_eq, 'ジャンル', class: 'label' %>
+                  <%= f.collection_select :genre_id_eq, Genre.where.not(id: 0), :id, :name,  include_blank: '指定なし', class: 'search-select' %>
+                </div>
+                <div class='label-select'>
+                  <%= f.label :price_id_eq, '価格', class: 'label' %>
+                  <%= f.collection_select :price_id_eq, Price.where.not(id: 0), :id, :name,  include_blank: '指定なし', class: 'search-select' %>
+                </div>
+                <div class='label-select'>
+                  <%= f.label :play_time_id_eq, 'プレイ時間', class: 'label' %>
+                  <%= f.collection_select :play_time_id_eq, PlayTime.where.not(id: 0), :id, :name,  include_blank: '指定なし', class: 'search-select' %>
+                </div>
+                <div class='label-select'>
+                  <%= f.label :plat_form_id_eq, 'プラットフォーム', class: 'label' %>
+                  <%= f.collection_select :plat_form_id_eq, PlatForm.where.not(id: 0), :id, :name,  include_blank: '指定なし', class: 'search-select' %>
+                </div>
+            <% end %>
+            <%#<form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            </form>%>
         </div>
       </nav>
     </div>
@@ -75,8 +98,14 @@
     <%= yield %>
     </main>
 
-    <footer>
-
+    <footer class="border-top border-dark">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="mx-auto">
+            <p>Yu_Giron.inc</p>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

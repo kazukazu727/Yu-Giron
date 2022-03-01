@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:mypage]
-
+  before_action :authenticate_user!,except: [:show]
   def show
     @user=User.find(params[:id])
     @reviews=@user.reviews.page(params[:page]).reverse_order

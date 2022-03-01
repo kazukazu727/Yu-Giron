@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
+   before_action :authenticate_user!,except: [:index]
   def index
-    @reviews=Review.all
+    @reviews=Review.order(created_at: :desc).page(params[:page])
   end
 
   def new
@@ -10,8 +11,13 @@ class ReviewsController < ApplicationController
   def create
     @review=Review.new(review_params)
     @review.user_id=current_user.id
-    @review.save
-    redirect_to user_mypage_path
+    if @review.save
+      flash[:notice]="投稿に成功しました"
+      redirect_to user_mypage_path
+    else
+      flash[:notice] = "項目を正しく記入してください"
+			redirect_to request.referrer
+		end
   end
 
   def show
@@ -25,9 +31,11 @@ class ReviewsController < ApplicationController
   def update
     @review=Review.find(params[:id])
     if @review.update(review_params)
+      flash[:notice]="投稿に成功しました"
       redirect_to reviews_path
     else
-      render :edit
+      flash[:notice] = "項目を正しく記入してください"
+			redirect_to request.referrer
     end
   end
 
@@ -38,7 +46,7 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:tittle, :genre, :introduction, :play_time, :user_id, :star, :price, :game_tittle, :plat_form)
+    params.require(:review).permit(:tittle, :genre_id, :introduction, :play_time_id, :user_id, :star, :price_id, :game_tittle, :plat_form_id)
   end
 
 end
