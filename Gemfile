@@ -71,3 +71,7 @@ gem 'ransack'
 gem 'pry-byebug'
 gem 'enum_help'
 gem 'active_hash'
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end
