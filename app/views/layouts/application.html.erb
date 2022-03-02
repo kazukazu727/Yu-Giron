@@ -12,87 +12,71 @@
   <body>
     <header>
       <div class="header-bottom">
-      <nav class="navbar navbar-expand-lg navbar-light p-5" style="background-color: #e3f2fd;">
-        <div class="container">
-            <%=link_to root_path, class: "navbar-brand" do %>
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+          <%=link_to root_path, class: "navbar-brand" do %>
             <h3>Yu_Giron</h3>
-            <% end %>
+          <% end %>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <% if signed_in? %>
               <div><i class="fas fa-bullhorn"></i>ようこそ、<strong><%= current_user.name %></strong>さん！</div>
               <li class="nav-item">
-                <%= link_to "マイページ",user_mypage_path, class: "nav-link text-dark border border-dark rounded" %>
+                <%= link_to "マイページ",user_mypage_path, class: "nav-link active" %>
               </li>
               <li class="nav-item">
-                <%= link_to "レビュー一覧",reviews_path, class: "nav-link text-dark border border-dark rounded" %>
+                <%= link_to "レビュー一覧",reviews_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to "ランキング",reviews_path, class: "nav-link text-dark border border-dark rounded" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "ログアウト",destroy_user_session_path, method: :delete, class: "nav-link text-dark border border-dark rounded" %>
+                <%= link_to "ログアウト",destroy_user_session_path, method: :delete, class: "nav-link" %>
               </li>
               <% else %>
               <li class="nav-item">
-                <%=link_to "About",about_path, class: "nav-link text-dark border border-dark rounded" %>
+                <%=link_to "About",about_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <%=link_to "商品一覧",reviews_path, class: "nav-link text-dark border border-dark rounded" %>
+                <%=link_to "レビュー一覧",reviews_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <%=link_to "新規登録",new_user_registration_path, class: "nav-link text-dark border border-dark rounded" %>
+                <%=link_to "新規登録",new_user_registration_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <%=link_to "ログイン",new_user_session_path, class: "nav-link text-dark border border-dark rounded" %>
+                <%=link_to "ログイン",new_user_session_path, class: "nav-link" %>
               </li>
               <% end %>
             </ul>
-          </div>
-        </div>
-      </nav>
-      <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand">検索欄</a>
+            <form class="d-flex">
             <%= search_form_for @search, url: reviews_path do |f| %>
-              <div class = 'nav-up'>
-                <dt><%= f.text_field :tittle_cont ,placeholder: '検索するテキストを入力...' %></dt>
-                <dd><%= f.submit ("検索") , class: 'search-btn'%></dd>
-              </div>
-              <div class='nav-down'>
-                <div class='label-select'>
-                  <%= f.label :genre_id_eq, 'ジャンル', class: 'label' %>
-                  <%= f.collection_select :genre_id_eq, Genre.where.not(id: 0), :id, :name,  include_blank: '指定なし', class: 'search-select' %>
-                </div>
-                <div class='label-select'>
-                  <%= f.label :price_id_eq, '価格', class: 'label' %>
-                  <%= f.collection_select :price_id_eq, Price.where.not(id: 0), :id, :name,  include_blank: '指定なし', class: 'search-select' %>
-                </div>
-                <div class='label-select'>
-                  <%= f.label :play_time_id_eq, 'プレイ時間', class: 'label' %>
-                  <%= f.collection_select :play_time_id_eq, PlayTime.where.not(id: 0), :id, :name,  include_blank: '指定なし', class: 'search-select' %>
-                </div>
-                <div class='label-select'>
-                  <%= f.label :plat_form_id_eq, 'プラットフォーム', class: 'label' %>
-                  <%= f.collection_select :plat_form_id_eq, PlatForm.where.not(id: 0), :id, :name,  include_blank: '指定なし', class: 'search-select' %>
-                </div>
+            <div class="me-2">
+              <%= f.text_field :tittle_cont ,placeholder: 'Search' %>
+              <%= f.submit ("検索") , class: 'search-btn btn-success'%>
+            </div>
+            <div class='col'>
+              <%= f.label :genre_id_eq, 'ジャンル', class: 'label' %>
+                <%= f.collection_select :genre_id_eq, Genre.where.not(id: 0), :id, :name,  include_blank: '指定なし', class: 'search-select' %>
+              <%= f.label :price_id_eq, '価格', class: 'label' %>
+                <%= f.collection_select :price_id_eq, Price.where.not(id: 0), :id, :name,  include_blank: '指定なし', class: 'search-select' %>
+              <%= f.label :play_time_id_eq, 'プレイ時間', class: 'label' %>
+                <%= f.collection_select :play_time_id_eq, PlayTime.where.not(id: 0), :id, :name,  include_blank: '指定なし', class: 'search-select' %>
+              <%= f.label :plat_form_id_eq, 'プラットフォーム', class: 'label' %>
+                <%= f.collection_select :plat_form_id_eq, PlatForm.where.not(id: 0), :id, :name,  include_blank: '指定なし', class: 'search-select' %>
+
+            </div>
             <% end %>
-            <%#<form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>%>
+            </form>
+          </div>
         </div>
       </nav>
     </div>
     </header>
 
     <main>
-        <% flash.each do |key, value| %>
-          <%= content_tag(:div, value, class: "#{key}") %>
-        <% end %>
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "#{key}") %>
+      <% end %>
       <p id="notice"></p>
 
     <%= yield %>

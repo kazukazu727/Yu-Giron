@@ -7,7 +7,6 @@
     <div class="col-lg-offset-1 col-lg-10">
       <table class="table">
         <tr class="active" style="font-weight: bold">
-          <td>ID</td>
           <td>ゲーム名</td>
           <td>評価</td>
           <td>タイトル</td>
@@ -16,12 +15,12 @@
         </tr>
         <% @favorite_reviews.each do |review|%>
         <tr>
-          <td><%= review.id %></td>
           <td><%= review.game_tittle %></td>
           <td>
             <div class="relative-review-star">
               <span id="star-rate-<%= review.id %>"></span>
               <script>
+              $('#star-rate-<%= review.id %>').empty();
                 $('#star-rate-<%= review.id %>').raty({
                   size: 36,
                   starOff: "<%= asset_path('star-off.png') %>",
@@ -35,7 +34,6 @@
               <%= review.star %>
             </div>
           </td>
-          <td><%= review.genre %></td>
           <td><%= link_to review.tittle, review_path(review) %></td>
           <td>
             <% user=User.find(review.user_id) %>

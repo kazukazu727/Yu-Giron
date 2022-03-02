@@ -24,6 +24,7 @@
           <div class="relative-review-star">
               <span id="star-rate-<%= @review.id %>"></span>
               <script>
+              $('#star-rate-<%= @review.id %>').empty();
               $('#star-rate-<%= @review.id %>').raty({
                 size: 36,
                 starOff: "<%= asset_path('star-off.png') %>",
@@ -41,14 +42,16 @@
       </dl>
     </div>
   </div>
+  <div class="row">
+    <% if user_signed_in? && @review.user_id ==current_user.id %>
+      <div class="d-grid gap-2 col-5 mx-auto">
+        <%= link_to "編集する", edit_review_path(@review), class: "btn btn-success btn-lg" %>
+      </div>
+      <div class="d-grid gap-2 col-5 mx-auto">
+        <%= link_to "削除する", review_path(@review), method: :delete, data: {confirm: "削除しますか？"} ,class: "btn btn-danger btn-lg" %>
+      </div>
+    <% end %>
+  </div>
 
-  <% if user_signed_in? && @review.user_id ==current_user.id %>
-  <div class="d-grid gap-2 col-5 mx-auto">
-    <%= link_to "編集する", edit_review_path(@review), class: "btn btn-success btn-lg" %>
-  </div>
-  <div class="d-grid gap-2 col-5 mx-auto">
-    <%= link_to "削除する", review_path(@review), method: :delete ,class: "btn btn-danger btn-lg" %>
-  </div>
-  <% end %>
 
 </div>

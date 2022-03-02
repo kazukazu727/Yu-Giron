@@ -13,9 +13,11 @@
           <td>タイトル</td>
           <td>詳細</td>
           <td>レビュワー</td>
-          <td>お気に入り</td>
+          <% if user_signed_in? %>
+            <td>お気に入り</td>
+          <% end %>
         </tr>
-        <% @search_reviews.each do |review| %>
+        <% @search_reviews.reverse_each do |review| %>
         <tr>
           <td><%= review.id %></td>
           <td><%= review.game_tittle %></td>
@@ -49,9 +51,11 @@
             <% user=User.find(review.user_id) %>
             <%= link_to user.name, user_path(user) %>
           </td>
+           <% if user_signed_in? %>
           <td>
             <div id="review_<%= review.id %>"><%= render "favorites/favorite", review: review %></div>
           </td>
+          <% end %>
         </tr>
         <%end%>
         <%= paginate @reviews %>

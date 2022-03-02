@@ -31,8 +31,8 @@ class ReviewsController < ApplicationController
   def update
     @review=Review.find(params[:id])
     if @review.update(review_params)
-      flash[:notice]="投稿に成功しました"
-      redirect_to reviews_path
+      flash[:notice]="更新に成功しました"
+      redirect_to review_path(@review)
     else
       flash[:notice] = "項目を正しく記入してください"
 			redirect_to request.referrer
@@ -41,8 +41,13 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review=Review.find(params[:id])
-    @review.destroy
-    redirect_to user_mypage_path
+    if @review.destroy
+      flash[:notice]="無事に削除しました"
+      redirect_to user_mypage_path
+    else
+      flash[:notice] = "削除に失敗しました"
+			redirect_to request.referrer
+		end
   end
 
   def review_params

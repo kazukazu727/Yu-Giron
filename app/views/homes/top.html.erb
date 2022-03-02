@@ -1,42 +1,60 @@
 <div class="container">
   <div class="row">
     <h1>レビューランキングTOP3</h1>
-      <div class="col border boorder-dark">
-        <h3>累計TOP3</h3>
-        <% @review_ranks.each.with_index(1) do |review, i| %>
-          第<%= i %>位
-          <%= review.tittle %>
-        <% end %>
-      </div>
-      <div class="col border boorder-dark">
-        <h3>月間TOP3</h3>
-        <% @month_review_ranks.each.with_index(1) do |review,i| %>
-          第<%= i %>位
-          <%= review.tittle %>
-        <% end %>
-      </div>
-      <div class="col border boorder-dark">
-        <h3>週間TOP3</h3>
-        <% @week_review_ranks.each.with_index(1) do |review,i| %>
-          第<%= i %>位
-          <%= review.tittle %>
-        <% end %>
-      </div>
-      <div class="col border boorder-dark">
-        <h3>日間TOP3</h3>
-        <% @day_review_ranks.each.with_index(1) do |review,i| %>
-          第<%= i %>位
-          <%= review.tittle %>
-        <% end %>
-      </div>
-        <p><%= link_to "すべてのレビューを見る", reviews_path %></p>
   </div>
   <div class="row">
-    <div class="col border boorder-dark">
-      <h1>歴代TOP3レビュワー</h1>
-      <% @user_ranks.last(3).each.with_index(1) do |user,i| %>
-        第<%= i %>位
-        <%= user.name %>
+      <div class="col">
+        <h3>累計TOP3</h3>
+        <% @review_ranks.each.with_index(1) do |review, i| %>
+          <h4>第<%= i %>位</h4>
+          <p><%= review.tittle %><br>
+             お気に入り数：<%= review.favorites.count %>
+          </p>
+        <% end %>
+      </div>
+      <div class="col">
+        <h3>月間TOP3</h3>
+        <% @month_review_ranks.each.with_index(1) do |review,i| %>
+          <h4>第<%= i %>位</h4>
+          <p><%= review.tittle %><br>
+             お気に入り数：<%= review.favorites.count %>
+          </p>
+        <% end %>
+      </div>
+      <div class="col">
+        <h3>週間TOP3</h3>
+        <% @week_review_ranks.each.with_index(1) do |review,i| %>
+          <h4>第<%= i %>位</h4>
+          <p><%= review.tittle %><br>
+             お気に入り数：<%= review.favorites.count %>
+          </p>
+        <% end %>
+      </div>
+      <div class="col">
+        <h3>日間TOP3</h3>
+        <% @day_review_ranks.each.with_index(1) do |review,i| %>
+          <h4>第<%= i %>位</h4>
+          <p><%= review.tittle %><br>
+             お気に入り数：<%= review.favorites.count %>
+          </p>
+        <% end %>
+      </div>
+      <div class="col d-flex align-items-end">
+        <p><%= link_to "すべてのレビューを見る", reviews_path %></p>
+      </div>
+  </div>
+</div>
+  <div class="container">
+    <div class="row">
+      <h1>歴代TOP3レビュワー(お気に入り数)</h1>
+    </div>
+    <div class="row">
+      <% @user_ranks.first(3).each.with_index(1) do |user,i| %>
+      <div class="col">
+        <h4>第<%= i %>位</h4>
+        <p>ユーザーネーム：<%= user.name %></p>
+        <p>総投稿数<%= user.reviews.count %></p>
+      </div>
       <% end %>
     </div>
   </div>

@@ -6,6 +6,6 @@ class PlayTime < ActiveHash::Base
     {id: 4, name: "10~20時間"},
     {id: 5, name: "20~50時間"},
     {id: 6, name: "50~100時間"},
-    {id: 7, name: "50~100時間"},
+    {id: 7, name: "100時間~"},
     ]
 end

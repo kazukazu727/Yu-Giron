@@ -4,79 +4,77 @@
       <h2>新規投稿</h2>
     </div>
   </div>
-</div>
 
-<div class="container text-center">
-  <%= form_with model: @review, url: reviews_path, method: :post, local:true do |f| %>
-   <div class="form-group col-md-9 col-md-offset-2">
-      <div class="form-inline">
-        <label class="col-sm-3">ゲーム名</label>
-        <%= f.text_field :game_tittle %>
-      </div>
-    </div>
+  <div class="row">
+    <div class="col-md-9 col-md-offset-2">
+      <%= form_with model: @review, url: reviews_path, method: :post, local:true do |f| %>
+        <div class="form-group col-md-9 col-md-offset-2">
+          <div class="form-inline">
+            <label class="col-sm-4">ゲーム名</label>
+            <%= f.text_field :game_tittle %>
+          </div>
+        </div>
 
-    <div class="form-group col-md-9 col-md-offset-2">
-      <div class="form-inline">
-        <label class="col-sm-3">タイトル</label>
-        <%= f.text_field :tittle %>
-      </div>
-    </div>
+        <div class="form-group col-md-9 col-md-offset-2">
+          <div class="form-inline">
+            <label class="col-sm-4">タイトル</label>
+            <%= f.text_field :tittle %>
+          </div>
+        </div>
 
-    <div class="form-group col-md-9 col-md-offset-2">
-      <div class="form-inline">
-        <label class="col-sm-3">ジャンル</label>
-        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
-      </div>
-    </div>
+        <div class="form-group col-md-9 col-md-offset-2">
+          <div class="form-inline">
+            <label class="col-sm-4">ジャンル</label>
+            <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
+          </div>
+        </div>
 
-    <div class="form-group col-md-9 col-md-offset-2">
-      <div class="form-inline">
-        <label class="col-sm-3">プレイ時間</label>
-        <%= f.collection_select(:play_time_id, PlayTime.all, :id, :name, {}, {class:"play_time-select"}) %>
-      </div>
-    </div>
+        <div class="form-group col-md-9 col-md-offset-2">
+          <div class="form-inline">
+            <label class="col-sm-4">プレイ時間</label>
+            <%= f.collection_select(:play_time_id, PlayTime.all, :id, :name, {}, {class:"play_time-select"}) %>
+          </div>
+        </div>
 
-    <div class="form-group col-md-9 col-md-offset-2">
-      <div class="form-inline">
-        <label class="col-sm-3">価格</label>
-        <%= f.collection_select(:price_id, Price.all, :id, :name, {}, {class:"price-select"}) %>
-      </div>
-    </div>
+        <div class="form-group col-md-9 col-md-offset-2">
+          <div class="form-inline">
+            <label class="col-sm-4">価格</label>
+            <%= f.collection_select(:price_id, Price.all, :id, :name, {}, {class:"price-select"}) %>
+          </div>
+        </div>
 
-    <div class="form-group col-md-9 col-md-offset-2">
-      <div class="form-inline">
-        <label class="col-sm-3">プラットフォーム</label>
-        <%= f.collection_select(:plat_form_id, PlatForm.all, :id, :name, {}, {class:"plat_form-select"}) %>
-      </div>
-    </div>
+        <div class="form-group col-md-9 col-md-offset-2">
+          <div class="form-inline">
+            <label class="col-sm-4">プラットフォーム</label>
+            <%= f.collection_select(:plat_form_id, PlatForm.all, :id, :name, {}, {class:"plat_form-select"}) %>
+          </div>
+        </div>
 
-    <div class="form-group col-md-9 col-md-offset-2" id="star">
-      <div class="form-inline">
-      <%= f.label :star, "評価：" %>
-      <%= f.hidden_field :star, id: :review_star %>
-      <script>
-        $('#star').raty({
-          size     : 36,
-          starOff:  '<%= asset_path('star-off.png') %>',
-          starOn : '<%= asset_path('star-on.png') %>',
-          starHalf: '<%= asset_path('star-half.png') %>',
-          scoreName: 'review[star]',/*   # starカラムへの保存 */
-          half: true,//   # 星半分の入力
-        });
-      </script>
-      </div>
-    </div>
+        <div class="form-group col-md-9 col-md-offset-2" id="star">
+          <label class="col-sm-4 text-center">評価</label>
+          <%= f.hidden_field :star, id: :review_star %>
+          <script>
+            $('#star').raty({
+              size     : 36,
+              starOff:  '<%= asset_path('star-off.png') %>',
+              starOn : '<%= asset_path('star-on.png') %>',
+              starHalf: '<%= asset_path('star-half.png') %>',
+              scoreName: 'review[star]',/*   # starカラムへの保存 */
+              half: true,//   # 星半分の入力
+            });
+          </script>
+        </div>
 
-    <div class="form-group col-md-9 col-md-offset-2">
-      <div class="form-inline">
-        <label class="col-sm-3">レビュー詳細</label>
-        <%= f.text_area :introduction %>
-      </div>
-    </div>
+        <div class="form-group col-md-9 col-md-offset-2">
+          <div class="form-inline">
+            <label class="col-sm-4">レビュー詳細</label>
+            <%= f.text_area :introduction %>
+          </div>
+        </div>
 
-    <div class="d-grid gap-2 col-6 mx-auto">
-      <%= f.submit "新規投稿", class: "btn btn-success btn-lg" %>
-    </div>
-
-  <% end %>
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <%= f.submit "新規投稿", class: "btn btn-success btn-lg" %>
+        </div>
+      <% end %>
+  </div>
 </div>

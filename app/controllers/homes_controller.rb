@@ -9,9 +9,12 @@ class HomesController < ApplicationController
       review_favorite_count.store(user, Favorite.where(review_id: Review.where(user_id: user.id).pluck(:id)).count)
     end
     @user_ranks=review_favorite_count.sort_by { |_, v| v }.reverse.to_h.keys
+
+
   end
 
   def about
   end
+
 
 end
