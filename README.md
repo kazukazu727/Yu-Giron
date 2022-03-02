@@ -17,7 +17,7 @@
 自分がプレイしたおすすめのゲームを誰かに教えたいときや、自分の予算や希望プレイ時間に合ったゲームを見つけたい時。
 
 ## 設計書
-...
+https://docs.google.com/spreadsheets/d/1vKD2WZEYGOX8jPss1r1M3Pr1dzq73PMAj2O8YWJw2x0/edit?usp=sharing
 
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1OUtwKvCChYYojuJCDnsavlKAc6uf4xuSbskAIwKyOEQ/edit?usp=sharing
